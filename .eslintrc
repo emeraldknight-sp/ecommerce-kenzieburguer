@@ -13,7 +13,7 @@
     "react/react-in-jsx-scope": "off",
     "react/self-closing-comp": "warn"
   },
-  "plugins": ["react", "import", "jsx-a11y"],
+  "plugins": ["import", "jsx-a11y"],
   "parserOptions": {
     "ecmaVersion": 2021,
     "sourceType": "module",
