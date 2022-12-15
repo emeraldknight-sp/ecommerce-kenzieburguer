@@ -49,6 +49,18 @@ Este é um projeto simples e se você o clonou em sua máquina para que possa ve
 yarn start
 ```
 
+Formatar o código do projeto
+
+```sh
+yarn write 
+```
+
+Checar se a formatação está igual para todos os arquivos
+
+```sh
+yarn check 
+```
+
 ## 🔖 Layout
 
 Você pode visualizar o layout do projeto [aqui](https://www.figma.com/file/DGYuUCq2pOjwHipdwYRTzq/Entrega%3A-e-Commerce-Kenzie-Burguer?node-id=0%3A1&t=4wyRrQcoxrp9SyWx-1). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
