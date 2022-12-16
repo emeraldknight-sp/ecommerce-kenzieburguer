@@ -1,6 +1,7 @@
 .header {
   background-color: var(--gray-1);
-  /* padding: 20px; */
+  position: fixed;
+  width: 100%;
 }
 
 .header section {

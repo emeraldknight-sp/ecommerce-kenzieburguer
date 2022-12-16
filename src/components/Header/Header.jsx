@@ -2,7 +2,8 @@ import "./styles.css";
 
 import { ReactComponent as KenzieBurguerBrand } from "../../assets/logo.svg";
 import { Container } from "../Container";
-import { FiMenu } from "react-icons/fi"
+import { FiMenu } from "react-icons/fi";
+import { toast } from "react-hot-toast";
 // import { useState } from "react";
 
 // eslint-disable-next-line no-unused-vars
@@ -18,15 +19,15 @@ export const Header = ({ showProducts }) => {
   // }
 
   const login = () => {
-    alert("Entrar");
+    toast.success("Entrar", { id: "login" });
   };
 
   const menu = () => {
-    alert("Menu");
+    toast.success("Menu", { id: "menu" });
   };
 
   const register = () => {
-    alert("Registro");
+    toast.success("Registro", { id: "register" });
   };
 
   return (
