@@ -3,10 +3,10 @@ import "./styles.css";
 
 export const ProductList = ({ products, handleClick }) => {
   return (
-    <article className="article">
+    <div className="product-list">
       {products.map((product) => (
         <ProductCard key={product.id} product={product} handleClick={handleClick} />
       ))}
-    </article>
+    </div>
   );
 };
