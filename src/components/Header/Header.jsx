@@ -1,23 +1,49 @@
 import "./styles.css";
 
 import { ReactComponent as Icon } from "../../assets/logo.svg";
-import { useState } from "react";
+import { Container } from "../Container";
+// import { useState } from "react";
 
+// eslint-disable-next-line no-unused-vars
 export const Header = ({ showProducts }) => {
-  const [searchParam, setSearchParam] = useState("");
+  // const [searchParam, setSearchParam] = useState("");
 
-  function searchProduct(value) {
-    setSearchParam(value);
+  // function searchProduct(value) {
+  //   setSearchParam(value);
 
-    if (searchParam.length > value.length) {
-      showProducts("");
-    }
-  }
+  //   if (searchParam.length > value.length) {
+  //     showProducts("");
+  //   }
+  // }
+
+  const login = () => {
+    alert("Entrar");
+  };
+
+  const menu = () => {
+    alert("Menu");
+  };
+
+  const register = () => {
+    alert("Registro");
+  };
 
   return (
     <header className="header">
-      <Icon />
-      <div className="header__search">
+      <Container>
+        <button type="button" className="button__sidebar" onClick={menu}>
+          X
+        </button>
+        <Icon />
+        <div className="header__button__group">
+          <button type="button" className="button__sign-in" onClick={login}>
+            Entrar
+          </button>
+          <button type="button" className="button__sign-up" onClick={register}>
+            Registre-se
+          </button>
+        </div>
+        {/* <div className="header__search">
         <input
           className="header__search__input"
           onChange={(e) => searchProduct(e.target.value)}
@@ -30,7 +56,8 @@ export const Header = ({ showProducts }) => {
         >
           Pesquisar
         </button>
-      </div>
+      </div> */}
+      </Container>
     </header>
   );
 };

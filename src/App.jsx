@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 
-import { ProductList } from "./components/ProductList";
 import { Header } from "./components/Header";
+import { Main } from "./components/Main/Main";
+
+import { ProductList } from "./components/ProductList";
 import { Cart } from "./components/Cart";
 
 import "./styles/reset.css";
@@ -43,16 +45,18 @@ export const App = () => {
   return (
     <div className="app">
       <Header showProducts={showProducts} />
-      <ProductList
-        products={filteredProducts.length > 0 ? filteredProducts : products}
-        showProducts={showProducts}
-        handleClick={handleClick}
-      />
-      <Cart
-        currentSale={currentSale}
-        deleteProduct={deleteProduct}
-        deleteAllProducts={deleteAllProducts}
-      />
+      <Main>
+        <ProductList
+          products={filteredProducts.length > 0 ? filteredProducts : products}
+          showProducts={showProducts}
+          handleClick={handleClick}
+        />
+        <Cart
+          currentSale={currentSale}
+          deleteProduct={deleteProduct}
+          deleteAllProducts={deleteAllProducts}
+        />
+      </Main>
     </div>
   );
 };
