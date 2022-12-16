@@ -1,7 +1,8 @@
 import "./styles.css";
 
-import { ReactComponent as Icon } from "../../assets/logo.svg";
+import { ReactComponent as KenzieBurguerBrand } from "../../assets/logo.svg";
 import { Container } from "../Container";
+import { FiMenu } from "react-icons/fi"
 // import { useState } from "react";
 
 // eslint-disable-next-line no-unused-vars
@@ -32,15 +33,15 @@ export const Header = ({ showProducts }) => {
     <header className="header">
       <Container>
         <button type="button" className="button__sidebar" onClick={menu}>
-          X
+          <FiMenu size={20} />
         </button>
-        <Icon />
+        <KenzieBurguerBrand />
         <div className="header__button__group">
-          <button type="button" className="button__sign-in" onClick={login}>
-            Entrar
-          </button>
           <button type="button" className="button__sign-up" onClick={register}>
             Registre-se
+          </button>
+          <button type="button" className="button__sign-in" onClick={login}>
+            Entrar
           </button>
         </div>
         {/* <div className="header__search">

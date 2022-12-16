@@ -19,14 +19,26 @@
 
 .button__sidebar {
   display: flex;
+  background-color: var(--gray-1);
+  border: 1px solid transparent;
 }
 
 .button__sign-in {
-  
+  /* display: flex; */
+  background: var(--color-primary);
+  color: var(--white);
+  font-weight: 600;
+  border: 2px solid var(--color-primary);
+  border-radius: 4px;
+  height: 36px;
 }
 
 .button__sign-up {
   display: none;
+  background: transparent;
+  color: var(--color-primary);
+  font-size: 1rem;
+  border: none;
 }
 
 .header__search {
