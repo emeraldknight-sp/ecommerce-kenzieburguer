@@ -1,12 +1,12 @@
-import { Product } from "../Product";
+import { ProductCard } from "../ProductCard/ProductCard";
 import "./styles.css";
 
 export const ProductList = ({ products, handleClick }) => {
   return (
-    <section className="section">
+    <article className="article">
       {products.map((product) => (
-        <Product key={product.id} product={product} handleClick={handleClick} />
+        <ProductCard key={product.id} product={product} handleClick={handleClick} />
       ))}
-    </section>
+    </article>
   );
 };

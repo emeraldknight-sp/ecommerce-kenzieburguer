@@ -1,7 +1,6 @@
 .car {
-  min-width: 300px;
+  min-width: 256px;
   max-width: 400px;
-  padding: 15px;
   margin: 0 auto;
   border: 2px solid transparent;
 }
