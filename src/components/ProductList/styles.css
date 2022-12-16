@@ -1,29 +1,28 @@
-.section {
+.article {
   display: flex;
   gap: 20px;
   overflow-y: auto;
-  padding: 15px 15px 0;
+  padding: 20px 0;
 }
 
-.section::-webkit-scrollbar {
+.article::-webkit-scrollbar {
   width: 1px;
 }
 
-.section::-webkit-scrollbar-thumb {
-  background-color: transparent;
+.article::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  width: 3px;
+  border-radius: 9999px;
+  border: 5px solid var(--white);
 }
 
-@media (min-width: 425px) {
-  .section {
-    padding: 15px 30px;
-  }
+@media only screen and (min-width: 768px) {
+
 }
 
-@media (min-width: 1000px) {
-  .section {
+@media only screen and (min-width: 1024px) {
+  .article {
     flex-wrap: wrap;
     justify-content: space-between;
-    /* width: 1500px; */
-    padding: 15px 100px;
   }
 }
