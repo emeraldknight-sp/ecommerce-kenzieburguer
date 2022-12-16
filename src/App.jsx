@@ -7,6 +7,7 @@ import { ProductList } from "./components/ProductList";
 import { Cart } from "./components/Cart";
 
 import "./styles/reset.css";
+import { Toaster } from "react-hot-toast";
 
 export const App = () => {
   const [products, setProducts] = useState([]);
@@ -44,6 +45,7 @@ export const App = () => {
 
   return (
     <div className="app">
+      <Toaster position="bottom-center" />
       <Header showProducts={showProducts} />
       <Main>
         <ProductList
