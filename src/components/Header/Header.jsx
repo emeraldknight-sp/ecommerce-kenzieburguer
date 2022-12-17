@@ -4,6 +4,7 @@ import { ReactComponent as KenzieBurguerBrand } from "../../assets/logo.svg";
 import { Container } from "../Container";
 import { FiMenu } from "react-icons/fi";
 import { toast } from "react-hot-toast";
+import { Button } from "../Button";
 // import { useState } from "react";
 
 // eslint-disable-next-line no-unused-vars
@@ -33,17 +34,22 @@ export const Header = ({ showProducts }) => {
   return (
     <header className="header">
       <Container>
-        <button type="button" className="button__sidebar" onClick={menu}>
+        <Button type="button" variant="icon" onClick={menu}>
           <FiMenu size={20} />
-        </button>
+        </Button>
         <KenzieBurguerBrand />
         <div className="header__button__group">
-          <button type="button" className="button__sign-up" onClick={register}>
+          <Button
+            type="button"
+            display="none"
+            variant="text"
+            onClick={register}
+          >
             Registre-se
-          </button>
-          <button type="button" className="button__sign-in" onClick={login}>
+          </Button>
+          <Button type="button" onClick={login}>
             Entrar
-          </button>
+          </Button>
         </div>
         {/* <div className="header__search">
         <input
