@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { Header } from "./components/Header";
-import { Main } from "./components/Main/Main";
+import { Main } from "./components/Main";
 
 import { ProductList } from "./components/ProductList";
 import { Cart } from "./components/Cart";
