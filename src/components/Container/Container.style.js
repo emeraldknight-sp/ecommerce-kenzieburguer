@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const StyledContainer = styled.section`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${(props) =>
+    props.direction === "column" ? "column" : "row"};
   max-width: 90vw;
   margin: 0 auto;
 
