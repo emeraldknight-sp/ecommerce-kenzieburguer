@@ -4,9 +4,6 @@ import { Header } from "./components/Header";
 import { Main } from "./components/Main";
 import { Cart } from "./components/Cart";
 import { ProductList } from "./components/ProductList";
-
-import { Toaster } from "react-hot-toast";
-import "./styles/reset.css";
 import { Container } from "./components/Container";
 
 export const App = () => {
@@ -55,7 +52,7 @@ export const App = () => {
 
   return (
     <div className="app">
-      <Toaster position="bottom-center" />
+      
       <Header showProducts={showProducts} />
       <Main>
         <div>
