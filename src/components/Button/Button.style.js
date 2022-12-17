@@ -8,7 +8,7 @@ export const StyledButton = styled.button`
   align-items: center;
 
   font-size: 1rem;
-  font-weight: bolder;
+  /* font-weight: bolder; */
   cursor: pointer;
 
   background-color: ${(props) =>
