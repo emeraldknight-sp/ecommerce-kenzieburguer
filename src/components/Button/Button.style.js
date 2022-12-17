@@ -11,7 +11,7 @@ export const StyledButton = styled.button`
   font-weight: bolder;
 
   background-color: ${(props) =>
-    props.variant === "text"
+    props.variant === "text" || props.variant === "icon"
       ? "var(--transparent)"
       : props.variant === "secondary"
       ? "var(--color-secondary)"
@@ -19,7 +19,7 @@ export const StyledButton = styled.button`
 
   border: 2px solid
     ${(props) =>
-      props.variant === "text"
+      props.variant === "text" || props.variant === "icon"
         ? "var(--transparent)"
         : props.variant === "secondary"
         ? "var(--color-secondary)"
@@ -28,9 +28,9 @@ export const StyledButton = styled.button`
   color: ${(props) =>
     props.variant === "text"
       ? "var(--color-primary)"
-      : props.variant === "secondary"
+      : props.variant === "secondary" || props.variant === "primary"
       ? "var(--white)"
-      : "var(--white)"};
+      : "var(--gray-4)"};
 
   /* width: ${(props) =>
     props.size === "medium"
