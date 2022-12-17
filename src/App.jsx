@@ -52,7 +52,6 @@ export const App = () => {
 
   return (
     <div className="app">
-      
       <Header showProducts={showProducts} />
       <Main>
         <div>
