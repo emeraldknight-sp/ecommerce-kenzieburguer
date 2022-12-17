@@ -9,6 +9,7 @@ export const StyledButton = styled.button`
 
   font-size: 1rem;
   font-weight: bolder;
+  cursor: pointer;
 
   background-color: ${(props) =>
     props.variant === "text" || props.variant === "icon"
@@ -56,6 +57,6 @@ export const StyledButton = styled.button`
   border-radius: ${(props) => (props.round === true ? "50%" : "8px")};
 
   @media only screen and (min-width: 1024px) {
-    display: flex;
+    display: ${(props) => (props.variant === "icon" ? "none" : "flex")};
   }
 `;
