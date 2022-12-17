@@ -20,6 +20,7 @@ export const StyledMain = styled.main`
 .header__search__input {
   border: none;
   outline: none;
+  width: 100%;
 }
 
 .header__search__button {
