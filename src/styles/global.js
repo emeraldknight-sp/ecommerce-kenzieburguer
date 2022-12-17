@@ -58,6 +58,8 @@ body, select, input, button, textarea {
 	--color-primary: #27AE60;
 	--color-primary-hover: #93D7AF;
 	--color-secondary: #EB5757;
+	--white: #FFFFFF;
+	--transparent: transparent;
 
 	/* GRAY SCALE PALLETE */
 	--gray-4: #333333;
