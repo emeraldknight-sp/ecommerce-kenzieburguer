@@ -1,9 +1,12 @@
 import "./styles.css";
 
-import { ReactComponent as KenzieBurguerBrand } from "../../assets/logo.svg";
+// import { ReactComponent as KenzieBurguerBrand } from "../../assets/logo.svg";
+import KenzieBurguerBrand from "../../assets/logo.svg";
 import { Container } from "../Container";
 import { FiMenu } from "react-icons/fi";
 import { toast } from "react-hot-toast";
+import { Button } from "../Button";
+// import { useNavigate } from "react-router-dom";
 // import { useState } from "react";
 
 // eslint-disable-next-line no-unused-vars
@@ -30,20 +33,33 @@ export const Header = ({ showProducts }) => {
     toast.success("Registro", { id: "register" });
   };
 
+  // const navigate = useNavigate();
+
   return (
     <header className="header">
       <Container>
         <button type="button" className="button__sidebar" onClick={menu}>
           <FiMenu size={20} />
         </button>
-        <KenzieBurguerBrand />
+        <div>
+          <a href="https://jsonplaceholder.typicode.com/" target="_blank" rel="noreferrer">
+            <figure>
+              <img src={KenzieBurguerBrand} alt="brand" />
+            </figure>
+          </a>
+        </div>
         <div className="header__button__group">
-          <button type="button" className="button__sign-up" onClick={register}>
+          <Button
+            type="button"
+            display="none"
+            variant="text"
+            onClick={register}
+          >
             Registre-se
-          </button>
-          <button type="button" className="button__sign-in" onClick={login}>
+          </Button>
+          <Button type="button" onClick={login}>
             Entrar
-          </button>
+          </Button>
         </div>
         {/* <div className="header__search">
         <input
