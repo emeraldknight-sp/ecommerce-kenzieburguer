@@ -1,7 +1,7 @@
 import Product from "../Product";
 import "./styles.css";
 
-const ProductList = ({ products, showProducts, handleClick }) => {
+const ProductList = ({ products, handleClick }) => {
   return (
     <section className="section">
       {products.map((product) => (

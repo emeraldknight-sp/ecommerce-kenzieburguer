@@ -5,7 +5,6 @@ import Header from './components/Header';
 import Cart from './components/Cart';
 
 import './reset.css'
-import './App.css';
 
 function App() {
 

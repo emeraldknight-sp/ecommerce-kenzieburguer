@@ -17,12 +17,12 @@ function CartProduct({ product, currentSale, deleteProduct }) {
           <span className="item__category">{product.category}</span>
         </div>
       </div>
-      <span
+      <button type="button"
         className="item__remove"
         onClick={() => deleteProduct(currentSale, product.id)}
       >
         Remover
-      </span>
+      </button>
     </div>
   );
 }
