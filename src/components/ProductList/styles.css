@@ -1,15 +1,15 @@
-.product-list {
+.product-list section {
   display: flex;
   gap: 20px;
   overflow-y: auto;
   padding: 20px 0;
 }
 
-.product-list::-webkit-scrollbar {
+.product-list section::-webkit-scrollbar {
   width: 1px;
 }
 
-.product-list::-webkit-scrollbar-thumb {
+.product-list section::-webkit-scrollbar-thumb {
   background-color: var(--color-primary);
   width: 3px;
   border-radius: 9999px;
@@ -21,7 +21,7 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .product-list {
+  .product-list section {
     flex-wrap: wrap;
     justify-content: space-between;
   }
