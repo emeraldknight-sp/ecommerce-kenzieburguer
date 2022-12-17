@@ -38,9 +38,9 @@ export const Header = ({ showProducts }) => {
   return (
     <header className="header">
       <Container>
-        <button type="button" className="button__sidebar" onClick={menu}>
+        <Button type="button" variant="icon" onClick={menu}>
           <FiMenu size={20} />
-        </button>
+        </Button>
         <div>
           <a href="https://jsonplaceholder.typicode.com/" target="_blank" rel="noreferrer">
             <figure>
