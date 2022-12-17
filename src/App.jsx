@@ -2,17 +2,27 @@ import { useEffect, useState } from "react";
 
 import { Header } from "./components/Header";
 import { Main } from "./components/Main";
-
-import { ProductList } from "./components/ProductList";
 import { Cart } from "./components/Cart";
+import { ProductList } from "./components/ProductList";
 
-import "./styles/reset.css";
 import { Toaster } from "react-hot-toast";
+import "./styles/reset.css";
+import { Container } from "./components/Container";
 
 export const App = () => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentSale, setCurrentSale] = useState([]);
+
+  const [searchParam, setSearchParam] = useState("");
+
+  function searchProduct(value) {
+    setSearchParam(value);
+
+    if (searchParam.length > value.length) {
+      showProducts("");
+    }
+  }
 
   function handleClick(product) {
     if (!currentSale.includes(product)) {
@@ -48,6 +58,24 @@ export const App = () => {
       <Toaster position="bottom-center" />
       <Header showProducts={showProducts} />
       <Main>
+        <div>
+          <Container>
+            <div className="header__search">
+              <input
+                className="header__search__input"
+                onChange={(e) => searchProduct(e.target.value)}
+                type="search"
+                placeholder="Digitar pesquisa"
+              />
+              <button
+                className="header__search__button"
+                onClick={() => showProducts(searchParam)}
+              >
+                Buscar
+              </button>
+            </div>
+          </Container>
+        </div>
         <ProductList
           products={filteredProducts.length > 0 ? filteredProducts : products}
           showProducts={showProducts}
