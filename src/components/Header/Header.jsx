@@ -5,7 +5,7 @@ import { toast } from "react-hot-toast";
 import { FiMenu } from "react-icons/fi";
 
 import KenzieBurguerBrand from "../../assets/logo.svg";
-import "./styles.css";
+import { StyledHeader } from "./Header.style";
 
 export const Header = () => {
   const login = () => {
@@ -21,7 +21,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="header">
+    <StyledHeader>
       <Container>
         <Button type="button" variant="icon" onClick={menu}>
           <FiMenu size={20} />
@@ -51,6 +51,6 @@ export const Header = () => {
           </Button>
         </div>
       </Container>
-    </header>
+    </StyledHeader>
   );
 };

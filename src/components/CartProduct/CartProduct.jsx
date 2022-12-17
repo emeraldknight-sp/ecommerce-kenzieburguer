@@ -1,8 +1,8 @@
-import "./styles.css";
+import { StyledCartProduct } from "./CartProduct.style";
 
 export const CartProduct = ({ product, currentSale, deleteProduct }) => {
   return (
-    <div className="item">
+    <StyledCartProduct>
       <div className="item__card">
         <figure className="item__figure">
           <img className="item__image" src={product.img} alt={product.name} />
@@ -22,6 +22,6 @@ export const CartProduct = ({ product, currentSale, deleteProduct }) => {
       >
         Remover
       </button>
-    </div>
+    </StyledCartProduct>
   );
 };

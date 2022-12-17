@@ -1,10 +1,10 @@
 import { Container } from "../Container";
 import { ProductCard } from "../ProductCard/ProductCard";
-import "./styles.css";
+import { StyledProductList } from "./ProductList.style";
 
 export const ProductList = ({ products, handleClick }) => {
   return (
-    <div className="product-list">
+    <StyledProductList>
       <Container>
         {products.map((product) => (
           <ProductCard
@@ -14,6 +14,6 @@ export const ProductList = ({ products, handleClick }) => {
           />
         ))}
       </Container>
-    </div>
+    </StyledProductList>
   );
 };

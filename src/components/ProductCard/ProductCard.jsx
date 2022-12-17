@@ -1,8 +1,8 @@
-import "./styles.css";
+import { StyledProductCard } from "./ProductCard.style";
 
 export const ProductCard = ({ product, handleClick }) => {
   return (
-    <div className="card">
+    <StyledProductCard>
       <figure className="card__figure">
         <img className="card__image" src={product.img} alt={product.name} />
       </figure>
@@ -21,6 +21,6 @@ export const ProductCard = ({ product, handleClick }) => {
           Adicionar
         </button>
       </div>
-    </div>
+    </StyledProductCard>
   );
 };
