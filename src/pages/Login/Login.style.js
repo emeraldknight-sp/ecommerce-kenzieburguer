@@ -65,7 +65,7 @@ export const StyledLogin = styled.div`
 
   .input {
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid var(--gray-3);
     border-radius: 4px;
     outline: none;
   }
