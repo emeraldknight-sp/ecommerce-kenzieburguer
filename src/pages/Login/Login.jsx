@@ -3,7 +3,7 @@ import { Container } from "../../components/Container";
 import { StyledLogin } from "./Login.style";
 
 import KenzieBurguerBrand from "../../assets/logo.svg";
-import FastFood from "../../assets/fast-food-01.jpg";
+import FastFood from "../../assets/fast-food-01.svg";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
 
@@ -24,11 +24,11 @@ export const Login = () => {
 
   return (
     <StyledLogin>
-      <figure className="figure__icon-login">
-        <img className="image__icon-login" src={FastFood} alt="banner" />
-      </figure>
-      <div className="login">
-        <Container>
+      <Container>
+        <figure className="figure__icon-login">
+          <img className="image__icon-login" src={FastFood} alt="banner" />
+        </figure>
+        <div className="login">
           <div className="brand">
             <button
               type="button"
@@ -51,6 +51,7 @@ export const Login = () => {
                 id="email"
                 name="email"
                 placeholder="Digite seu email ou telefone"
+                autoComplete="off"
               />
             </div>
             <div className="input-container">
@@ -69,9 +70,7 @@ export const Login = () => {
               <label htmlFor="remember">Lembre-se de mim por 30 dias</label>
               <input id="remember" type="checkbox" />
             </div>
-            <Button type="submit">
-              Entrar
-            </Button>
+            <Button type="submit">Entrar</Button>
             <div className="span-group">
               <span className="span">
                 <a href="/login" onClick={(e) => handleClick(e, "Redefinir!")}>
@@ -89,8 +88,8 @@ export const Login = () => {
               </span>
             </div>
           </form>
-        </Container>
-      </div>
+        </div>
+      </Container>
     </StyledLogin>
   );
 };
