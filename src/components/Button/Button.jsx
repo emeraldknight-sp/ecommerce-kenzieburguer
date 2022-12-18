@@ -9,7 +9,13 @@ export const Button = ({
   ...rest
 }) => {
   return (
-    <StyledButton display={display} variant={variant} size={size} round={round} {...rest}>
+    <StyledButton
+      display={display}
+      variant={variant}
+      size={size}
+      round={round}
+      {...rest}
+    >
       {children}
     </StyledButton>
   );

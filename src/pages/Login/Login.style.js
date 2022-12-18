@@ -19,7 +19,7 @@ export const StyledLogin = styled.div`
   .image__icon-login {
     width: 250px;
   }
-  
+
   .login {
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@ export const StyledLogin = styled.div`
     align-items: center;
     padding: 10px 40px;
   }
-  
+
   .login__button {
     background-color: transparent;
     border: none;
@@ -100,7 +100,6 @@ export const StyledLogin = styled.div`
   }
 
   @media only screen and (min-width: 1024px) {
-    
     section {
       display: flex;
       flex-direction: row;
@@ -113,7 +112,6 @@ export const StyledLogin = styled.div`
   }
 
   @media only screen and (min-width: 1440px) {
-    
     section {
       gap: 100px;
     }
