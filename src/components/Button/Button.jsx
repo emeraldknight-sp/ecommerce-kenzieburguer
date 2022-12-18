@@ -2,17 +2,17 @@ import { StyledButton } from "./Button.style";
 
 export const Button = ({
   children,
-  display = "flex",
   variant = "primary",
   size = "medium",
+  bold,
   round,
   ...rest
 }) => {
   return (
     <StyledButton
-      display={display}
       variant={variant}
       size={size}
+      bold={bold}
       round={round}
       {...rest}
     >

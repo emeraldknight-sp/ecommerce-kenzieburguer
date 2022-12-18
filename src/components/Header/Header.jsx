@@ -39,6 +39,7 @@ export const Header = () => {
             type="button"
             display="none"
             variant="text"
+            bold
             onClick={register}
           >
             Registre-se
