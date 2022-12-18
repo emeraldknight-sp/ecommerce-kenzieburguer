@@ -28,20 +28,23 @@ export const StyledProductCard = styled.div`
 }
 
 .card__title {
-  font-size: var(--headline);
+  font-size: var(--content-md);
+  line-height: var(--line-height-md);
   font-weight: bold;
   line-height: 24px;
   color: var(--gray-4);
 }
 
 .card__category {
-  font-size: var(--caption);
+  font-size: var(--content-sm);
+  line-height: var(--line-height-sm);
   line-height: 16px;
   color: var(--gray-3);
 }
 
 .card__price {
-  font-size: var(--body-600);
+  font-size: var(--content-sm);
+  line-height: var(--line-height-sm);
   font-weight: 600;
   line-height: 24px;
   color: var(--color-primary);
@@ -49,7 +52,8 @@ export const StyledProductCard = styled.div`
 
 .card__button {
   background-color: var(--color-primary);
-  font-size: var(--body-600);
+  font-size: var(--content-sm);
+  line-height: var(--line-height-sm);
   font-weight: 600;
   color: white;
 

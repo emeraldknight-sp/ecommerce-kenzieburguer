@@ -7,7 +7,8 @@ export const StyledButton = styled.button`
   justify-content: center;
   align-items: center;
 
-  font-size: 1rem;
+  font-size: var(--content-md);
+  line-height: var(--line-height-md);
   /* font-weight: bolder; */
   cursor: pointer;
 

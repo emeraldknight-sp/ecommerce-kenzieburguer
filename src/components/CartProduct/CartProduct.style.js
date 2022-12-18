@@ -33,20 +33,23 @@ export const StyledCartProduct = styled.div`
 
   .item__title {
     font-size: var(--heading-3);
+    line-height: var(--line-height-h3);
     color: var(--gray-4);
     font-weight: bold;
     line-height: 24px;
   }
 
   .item__category {
-    font-size: var(--caption);
+    font-size: var(--content-sm);
+    line-height: var(--line-height-sm);
     font-weight: 400;
     line-height: 16px;
     color: var(--gray-3);
   }
 
   .item__remove {
-    font-size: var(--caption);
+    font-size: var(--content-sm);
+    line-height: var(--line-height-sm);
     font-weight: 400;
     line-height: 16px;
     color: var(--gray-3);

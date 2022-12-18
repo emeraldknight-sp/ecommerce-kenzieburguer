@@ -10,15 +10,21 @@ export const StyledLogin = styled.div`
   background-color: var(--gray-1);
 
   .figure__icon-login {
-    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 
   .image__icon-login {
-    height: 100%;
+    width: 250px;
   }
   
   .login {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .brand {
@@ -53,11 +59,15 @@ export const StyledLogin = styled.div`
   }
 
   .label {
-    font-size: var(--caption);
+    font-size: var(--content-xs);
+    line-height: var(--line-height-xs);
   }
 
   .input {
     padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    outline: none;
   }
 
   .checkbox {
@@ -65,7 +75,8 @@ export const StyledLogin = styled.div`
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
-    font-size: var(--caption);
+    font-size: var(--content-xs);
+    line-height: var(--line-height-xs);
   }
 
   .span-group {
@@ -77,7 +88,8 @@ export const StyledLogin = styled.div`
 
   .span {
     display: flex;
-    font-size: var(--caption);
+    font-size: var(--content-xs);
+    line-height: var(--line-height-xs);
     gap: 4px;
   }
 
@@ -88,10 +100,26 @@ export const StyledLogin = styled.div`
   }
 
   @media only screen and (min-width: 1024px) {
-    flex-direction: row;
+    
+    section {
+      display: flex;
+      flex-direction: row;
+      gap: 70px;
+    }
 
-    .figure__icon-login {
-      height: 400px;
+    .image__icon-login {
+      width: 450px;
+    }
+  }
+
+  @media only screen and (min-width: 1440px) {
+    
+    section {
+      gap: 100px;
+    }
+
+    .image__icon-login {
+      width: 650px;
     }
   }
 `;

@@ -38,7 +38,8 @@ export const StyledHeader = styled.header`
     display: none;
     background: transparent;
     color: var(--color-primary);
-    font-size: 1rem;
+    font-size: var(--content-md);
+    line-height: var(--line-height-md);
     border: none;
   }
 

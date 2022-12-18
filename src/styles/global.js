@@ -52,6 +52,7 @@ body, select, input, button, textarea {
 
 :root {
 
+	/* TIPOGRAPHY */
   --fontfamily: 'Outfit', sans-serif;
 
 	/* PRIMARY PALLETE */
@@ -67,20 +68,35 @@ body, select, input, button, textarea {
 	--gray-2: #E0E0E0;
 	--gray-1: #F5F5F5;
 
-	/* SINALIZAÇÔES */
+	/* ALERTS */
 	--negative: #E60000;
 	--warning: #FFCD07;
 	--sucess: #168821;
 	--information: #155BCB;
 
-	/* HEADINGS */
-	--heading-1: 26px;
-	--heading-2: 22px;
-	--heading-3: 18px;
-	--heading-4: 14px;
-	--headline: 16px;
-	--body: 14px;
-	--body-600: 14px;
-	--caption: 12px;
+	/* HEADING-1 - 24px */
+	--heading-1: 1.5rem;
+	--line-height-h1: 2rem;
+	
+	/* HEADING-2 - 20px */
+	--heading-2: 1.25rem;
+	--line-height-h2: 1.75rem;
+	
+	/* HEADING-3 - 18px */
+	--heading-3: 1.125rem;
+  --line-height-h3: 1.75rem;
+	
+	/* CONTENT MD - 16px */
+	--content-md: 1rem;
+	--line-height-md: 1.5rem;
+	
+	/* CONTENT SM - 14px */
+	--content-sm: 0.875rem;
+	--line-height-sm: 1.25rem;
+
+	/* CONTENT XS - 12px */
+	--content-xs: 0.75rem;
+	--line-height-xs: 1rem;
+	
 }
 `;
