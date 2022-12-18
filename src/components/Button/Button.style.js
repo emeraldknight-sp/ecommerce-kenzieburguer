@@ -25,7 +25,7 @@ export const StyledButton = styled.button`
         ? "var(--transparent)"
         : props.variant === "secondary"
         ? "var(--color-secondary)"
-        : "var(--gray-1)"};
+        : "var(--color-primary)"};
 
   color: ${(props) =>
     props.variant === "text"
@@ -56,6 +56,8 @@ export const StyledButton = styled.button`
       : "50px"};
 
   border-radius: ${(props) => (props.round === true ? "50%" : "8px")};
+
+  font-weight: ${(props) => props.bold ? "600" : ""};
 
   @media only screen and (min-width: 1024px) {
     display: ${(props) => (props.variant === "icon" ? "none" : "flex")};
