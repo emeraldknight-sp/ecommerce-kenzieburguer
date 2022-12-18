@@ -6,10 +6,13 @@ import { FiMenu } from "react-icons/fi";
 
 import KenzieBurguerBrand from "../../assets/logo.svg";
 import { StyledHeader } from "./Header.style";
+import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
-  const login = () => {
-    toast.success("Entrar", { id: "login" });
+  const navigate = useNavigate();
+
+  const login = (link) => {
+    navigate(`${link}`);
   };
 
   const menu = () => {
@@ -26,17 +29,11 @@ export const Header = () => {
         <Button type="button" variant="icon" onClick={menu}>
           <FiMenu size={20} />
         </Button>
-        <div>
-          <a
-            href="https://jsonplaceholder.typicode.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <figure>
-              <img src={KenzieBurguerBrand} alt="brand" />
-            </figure>
-          </a>
-        </div>
+        <a href="/">
+          <figure>
+            <img src={KenzieBurguerBrand} alt="brand" />
+          </figure>
+        </a>
         <div className="header__button__group">
           <Button
             type="button"
@@ -46,7 +43,7 @@ export const Header = () => {
           >
             Registre-se
           </Button>
-          <Button type="button" onClick={login}>
+          <Button type="button" onClick={() => login("/login")}>
             Entrar
           </Button>
         </div>
