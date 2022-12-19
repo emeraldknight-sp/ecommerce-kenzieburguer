@@ -17,7 +17,7 @@ export const StyledLogin = styled.div`
   }
 
   .image__icon-login {
-    width: 250px;
+    width: 150px;
   }
 
   .login {
@@ -93,6 +93,11 @@ export const StyledLogin = styled.div`
     gap: 4px;
   }
 
+  .error {
+
+    color: var(--negative);
+  }
+
   .footer {
     width: 100%;
     background-color: var(--gray-3);
@@ -107,7 +112,7 @@ export const StyledLogin = styled.div`
     }
 
     .image__icon-login {
-      width: 450px;
+      width: 350px;
     }
   }
 
@@ -117,7 +122,7 @@ export const StyledLogin = styled.div`
     }
 
     .image__icon-login {
-      width: 650px;
+      width: 450px;
     }
   }
 `;
