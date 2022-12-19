@@ -4,13 +4,13 @@ export const StyledHeader = styled.header`
   background-color: var(--gray-1);
   position: fixed;
   width: 100%;
+  padding: 20px 0;
 
   section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
   }
 
   .header__button__group {
