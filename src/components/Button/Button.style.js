@@ -34,13 +34,6 @@ export const StyledButton = styled.button`
       ? "var(--white)"
       : "var(--gray-4)"};
 
-  /* width: ${(props) =>
-    props.size === "medium"
-      ? "128px"
-      : props.size === "small"
-      ? "64px"
-      : "256px"}; */
-
   padding: ${(props) =>
     props.size === "medium"
       ? "10px"
