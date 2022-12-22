@@ -1,4 +1,5 @@
 import { FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 import { Container } from "../Container";
 import { StyledFooter } from "./Footer.style";
@@ -16,27 +17,27 @@ export const Footer = () => {
             <h3>Contatos</h3>
             <ul>
               <li>
-                <a
-                  href="https://www.instagram.com/davidalmeidadev/"
+                <Link
+                  to="https://www.instagram.com/davidalmeidadev/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaInstagram size={16} />
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://www.linkedin.com/in/davidalmeidadev/"
+                <Link
+                  to="https://www.linkedin.com/in/davidalmeidadev/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaLinkedin size={16} />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/" target="_blank" rel="noopener noreferrer">
+                <Link to="/" target="_blank" rel="noopener noreferrer">
                   <FaWhatsapp size={16} />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

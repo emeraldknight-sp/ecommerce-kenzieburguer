@@ -6,7 +6,7 @@ import { FiMenu } from "react-icons/fi";
 
 import KenzieBurguerBrand from "../../assets/logo.svg";
 import { StyledHeader } from "./Header.style";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const navigate = useNavigate();
@@ -29,11 +29,11 @@ export const Header = () => {
         <Button type="button" variant="icon" onClick={menu}>
           <FiMenu size={20} />
         </Button>
-        <a href="/">
+        <Link to="/">
           <figure>
             <img src={KenzieBurguerBrand} alt="brand" />
           </figure>
-        </a>
+        </Link>
         <div className="header__button__group">
           <Button
             type="button"

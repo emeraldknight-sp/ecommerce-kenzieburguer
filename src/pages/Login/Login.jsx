@@ -1,7 +1,7 @@
 import * as yup from "yup";
 import { toast } from "react-hot-toast";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import { Button } from "../../components/Button";
@@ -12,8 +12,6 @@ import KenzieBurguerBrand from "../../assets/logo.svg";
 import FastFood from "../../assets/fast-food-01.svg";
 
 export const Login = () => {
-  const navigate = useNavigate();
-
   const schema = yup.object().shape({
     email: yup
       .string()
@@ -47,15 +45,11 @@ export const Login = () => {
         </figure>
         <div className="login">
           <div className="brand">
-            <button
-              type="button"
-              className="login__button"
-              onClick={() => navigate("/")}
-            >
+            <Link className="login__button" to="/">
               <figure>
                 <img src={KenzieBurguerBrand} alt="brand" />
               </figure>
-            </button>
+            </Link>
           </div>
           {/* FORMULARIO */}
           <form className="form" onSubmit={handleSubmit(onSubmit)}>
@@ -99,27 +93,27 @@ export const Login = () => {
 
             <div className="span-group">
               <span className="span">
-                <a
-                  href="/login"
+                <Link
+                  to="/login"
                   onClick={(e) => {
                     e.preventDefault();
                     toast.success("Redefinir senha!", { id: "pwd" });
                   }}
                 >
-                  Esqueceu a senha?
-                </a>
+                  Esqueceu Link senha?
+                </Link>
               </span>
               <span className="span">
                 Não possui conta?
-                <a
-                  href="/login"
+                <Link
+                  to="/login"
                   onClick={(e) => {
                     e.preventDefault();
                     toast.success("Criar conta!", { id: "signup" });
                   }}
                 >
                   Crie uma agora!
-                </a>
+                </Link>
               </span>
             </div>
           </form>
