@@ -1,10 +1,35 @@
 import { toast } from "react-hot-toast";
+import { v4 as uuidv4 } from "uuid";
+
 import { Button } from "../Button";
 import { CartProduct } from "../CartProduct";
 
 import { StyledCart } from "./Cart.style.js";
 
-export const Cart = ({ cart, deleteAll, addItem, removeItem }) => {
+export const Cart = ({
+  cart,
+  removeAll,
+  addItem,
+  removeItem,
+  removeFromCart,
+  cartCountTotal,
+}) => {
+  const items = cart.map((item) => item.name);
+  const price = cart.map((item) => item.price);
+  const subtotal = price.reduce((acc, currentValue) => acc + currentValue, 0);
+
+  const order = {
+    id: uuidv4(),
+    items: items,
+    price: price,
+    subtotal: subtotal,
+  };
+
+  const sendOrder = () => {
+    toast.success("Pedido finalizado!", { id: "sendOrder" });
+    return console.log({status: "Pedido realizado", order: order});
+  };
+
   return (
     <StyledCart>
       <div className="car__header">
@@ -26,38 +51,25 @@ export const Cart = ({ cart, deleteAll, addItem, removeItem }) => {
                   item={item}
                   addItem={addItem}
                   removeItem={removeItem}
+                  removeFromCart={removeFromCart}
                 />
               ))}
             </div>
             <div className="car__values">
               <div className="car__values__details">
                 <span className="car__total">Total</span>
-                <span className="car__value">
-                  {cart
-                    .reduce(
-                      (initialValue, item) => initialValue + item.price,
-                      0
-                    )
-                    .toLocaleString("PT-BR", {
-                      currency: "BRL",
-                      style: "currency",
-                    })}
-                </span>
+                <span className="car__value">{cartCountTotal}</span>
               </div>
               <div className="button__group">
                 <Button
                   size="md"
                   variant="text"
                   className="car__button"
-                  onClick={() => deleteAll(cart)}
+                  onClick={() => removeAll(cart)}
                 >
                   Remover todos
                 </Button>
-                <Button
-                  size="md"
-                  full
-                  onClick={() => toast.success("Pedido finalizado!")}
-                >
+                <Button size="md" full onClick={() => sendOrder()}>
                   Finalizar pedido!
                 </Button>
               </div>
