@@ -1,6 +1,8 @@
 export const DrinksAlcoholicals = [
   {
-    id: "ea43ffb8500c4bc8a32faffa",
+    id: 1,
+    quantity: 1,
+    price: 10,
     spirit_id: "gin",
     cocktail_name: "20th Century",
     description:
@@ -95,11 +97,11 @@ export const DrinksAlcoholicals = [
         },
       },
     ],
-    created_at: "2022-12-04T02:31:08.290136+00:00",
-    updated_at: null,
   },
   {
-    id: "e2677dfe0cc14bcfa9e0e5ed",
+    id: 2,
+    quantity: 1,
+    price: 14,
     spirit_id: "gin",
     cocktail_name: "50/50 Martini",
     description:
@@ -195,11 +197,11 @@ export const DrinksAlcoholicals = [
         },
       },
     ],
-    created_at: "2022-12-06T00:07:09.939403+00:00",
-    updated_at: null,
   },
   {
-    id: "82869651ce2140288fcbea2e",
+    id: 3,
+    quantity: 1,
+    price: 18,
     spirit_id: "whiskey",
     cocktail_name: "7 and 7",
     description:
@@ -270,11 +272,11 @@ export const DrinksAlcoholicals = [
         },
       },
     ],
-    created_at: "2022-12-07T03:20:27.596039+00:00",
-    updated_at: null,
   },
   {
-    id: "300f86d70ea54ab5a9d40c20",
+    id: 4,
+    quantity: 1,
+    price: 16,
     spirit_id: "vodka",
     cocktail_name: "Adios Motherfucker",
     description:
@@ -410,11 +412,11 @@ export const DrinksAlcoholicals = [
         },
       },
     ],
-    created_at: "2022-12-07T04:25:46.110588+00:00",
-    updated_at: null,
   },
   {
-    id: "0b7ccfbaab3048a290f75070",
+    id: 5,
+    quantity: 1,
+    price: 11,
     spirit_id: "other",
     cocktail_name: "Adonis",
     description:
@@ -500,11 +502,11 @@ export const DrinksAlcoholicals = [
         },
       },
     ],
-    created_at: "2022-12-07T04:59:08.628966+00:00",
-    updated_at: null,
   },
   {
-    id: "a85ea97848a949f39d76f6c6",
+    id: 6,
+    quantity: 1,
+    price: 17,
     spirit_id: "other",
     cocktail_name: "Alabama Slammer",
     description:
@@ -601,11 +603,11 @@ export const DrinksAlcoholicals = [
         },
       },
     ],
-    created_at: "2022-12-07T20:26:17.917802+00:00",
-    updated_at: null,
   },
   {
-    id: "39563742f10e4365a699e844",
+    id: 7,
+    quantity: 1,
+    price: 19,
     spirit_id: "other",
     cocktail_name: "Americano",
     description:
@@ -708,11 +710,11 @@ export const DrinksAlcoholicals = [
         },
       },
     ],
-    created_at: "2022-11-26T06:29:46.521283+00:00",
-    updated_at: null,
   },
   {
-    id: "debe5c0f508d44dc94fb6a31",
+    id: 8,
+    quantity: 1,
+    price: 20,
     spirit_id: "rum",
     cocktail_name: "Ancient Mariner",
     description:
@@ -818,11 +820,11 @@ export const DrinksAlcoholicals = [
         },
       },
     ],
-    created_at: "2022-12-07T20:58:10.198201+00:00",
-    updated_at: null,
   },
   {
-    id: "47347fe8b75f4d969e07fb5e",
+    id: 9,
+    quantity: 1,
+    price: 8,
     spirit_id: "gin",
     cocktail_name: "Angel Face",
     description:
@@ -915,11 +917,11 @@ export const DrinksAlcoholicals = [
         },
       },
     ],
-    created_at: "2022-11-26T06:37:47.088325+00:00",
-    updated_at: null,
   },
   {
-    id: "370160f845694672ab69f30d",
+    id: 10,
+    quantity: 1,
+    price: 14,
     spirit_id: "tequila",
     cocktail_name: "Aperol sunrise",
     description:
@@ -1005,11 +1007,11 @@ export const DrinksAlcoholicals = [
         },
       },
     ],
-    created_at: "2022-12-07T21:17:12.749219+00:00",
-    updated_at: null,
   },
   {
-    id: "9a21075a8b5b4482b81fe529",
+    id: 11,
+    quantity: 1,
+    price: 17,
     spirit_id: "vodka",
     cocktail_name: "Appletini",
     description:
@@ -1116,11 +1118,11 @@ export const DrinksAlcoholicals = [
         },
       },
     ],
-    created_at: "2022-12-08T00:26:34.103375+00:00",
-    updated_at: null,
   },
   {
-    id: "6714fb4c621a4a179a189889",
+    id: 12,
+    quantity: 1,
+    price: 13,
     spirit_id: "gin",
     cocktail_name: "Aviation",
     description:
@@ -1222,11 +1224,11 @@ export const DrinksAlcoholicals = [
         },
       },
     ],
-    created_at: "2022-11-26T06:57:56.052853+00:00",
-    updated_at: null,
   },
   {
-    id: "002113297f074eff93b2c6d1",
+    id: 13,
+    quantity: 1,
+    price: 11,
     spirit_id: "vodka",
     cocktail_name: "B and B",
     description:
@@ -1288,11 +1290,11 @@ export const DrinksAlcoholicals = [
         },
       },
     ],
-    created_at: "2022-12-08T03:00:16.546848+00:00",
-    updated_at: null,
   },
   {
-    id: "e52401ccfe1a4daa8167bbf6",
+    id: 14,
+    quantity: 1,
+    price: 16,
     spirit_id: "rum",
     cocktail_name: "Barracuda",
     description:
@@ -1405,11 +1407,11 @@ export const DrinksAlcoholicals = [
         },
       },
     ],
-    created_at: "2022-11-29T22:23:12.225333+00:00",
-    updated_at: null,
   },
   {
-    id: "9a1726fda235454ca2252dd4",
+    id: 15,
+    quantity: 1,
+    price: 7,
     spirit_id: "vodka",
     cocktail_name: "Bay Breeze",
     description:
@@ -1495,11 +1497,11 @@ export const DrinksAlcoholicals = [
         },
       },
     ],
-    created_at: "2022-12-15T05:37:08.961835+00:00",
-    updated_at: null,
   },
   {
-    id: "ae74ecfb007747809667de96",
+    id: 16,
+    quantity: 1,
+    price: 18,
     spirit_id: "gin",
     cocktail_name: "Bee's Knees",
     description:
@@ -1601,11 +1603,11 @@ export const DrinksAlcoholicals = [
         },
       },
     ],
-    created_at: "2022-11-30T00:22:17.619322+00:00",
-    updated_at: null,
   },
   {
-    id: "6617a28acaa345bd9853d924",
+    id: 17,
+    quantity: 1,
+    price: 10,
     spirit_id: "other",
     cocktail_name: "Bellini",
     description:
@@ -1688,11 +1690,11 @@ export const DrinksAlcoholicals = [
         },
       },
     ],
-    created_at: "2022-11-28T07:20:58.861446+00:00",
-    updated_at: null,
   },
   {
-    id: "336776fc7a954241b5df226f",
+    id: 18,
+    quantity: 1,
+    price: 15,
     spirit_id: "brandy",
     cocktail_name: "Between the Sheets",
     description:
@@ -1795,11 +1797,11 @@ export const DrinksAlcoholicals = [
         },
       },
     ],
-    created_at: "2022-11-26T18:37:27.044810+00:00",
-    updated_at: null,
   },
   {
-    id: "eb8f94dfe2734e028ad862ca",
+    id: 19,
+    quantity: 1,
+    price: 19,
     spirit_id: "vodka",
     cocktail_name: "Bijou",
     description:
@@ -1895,11 +1897,11 @@ export const DrinksAlcoholicals = [
         },
       },
     ],
-    created_at: "2022-12-16T01:28:33.506006+00:00",
-    updated_at: null,
   },
   {
-    id: "6487a09a25db43fbb99e951d",
+    id: 20,
+    quantity: 1,
+    price: 14,
     spirit_id: "vodka",
     cocktail_name: "Black Russian",
     description:
@@ -1978,7 +1980,5 @@ export const DrinksAlcoholicals = [
         },
       },
     ],
-    created_at: "2022-11-28T17:53:08.830816+00:00",
-    updated_at: null,
   },
 ];
