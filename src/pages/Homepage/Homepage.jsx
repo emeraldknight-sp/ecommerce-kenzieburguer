@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast } from "react-hot-toast";
 
 import { ProductList } from "../../components/ProductList";
 import { Container } from "../../components/Container";
@@ -28,6 +29,7 @@ export const Homepage = () => {
               price: item.price,
               quantity: item.quantity,
               image: item.image,
+              category: item.category,
             },
           ]);
           return { ...item, inCart: true };
@@ -35,6 +37,8 @@ export const Homepage = () => {
         return item;
       })
     );
+
+    toast.success("Item adicionado!", { id: "addInItems" });
   };
 
   const removeFromCart = (i) => {
@@ -44,19 +48,28 @@ export const Homepage = () => {
         chosenItem = cart[index].name;
         break;
       }
-
-      setCart((state) => state.filter((item) => chosenItem !== item.name));
-      setItems((state) =>
-        state.map((item) =>
-          item.name === chosenItem
-            ? { ...item, inCart: false, quantity: 1 }
-            : item
-        )
-      );
     }
+    setCart((state) => state.filter((item) => chosenItem !== item.name));
+    setItems((state) =>
+      state.map((item) =>
+        item.name === chosenItem
+          ? { ...item, inCart: false, quantity: 1 }
+          : item
+      )
+    );
+
+    toast.error("Item removido", { id: "removeInItems" });
   };
 
-  // const cartCountTotal = cart.reduce((acc, item) => acc + item.quantity, 0);
+  const cartCountTotal = cart
+    .reduce(
+      (initialValue, item) => initialValue + item.price * item.quantity,
+      0
+    )
+    .toLocaleString("PT-BR", {
+      currency: "BRL",
+      style: "currency",
+    });
 
   const addItem = {
     inItems: (i) => {
@@ -67,7 +80,6 @@ export const Homepage = () => {
             : item
         )
       );
-      console.log(i, "Add In Items!");
     },
     inCart: (i) => {
       setCart((state) =>
@@ -77,7 +89,6 @@ export const Homepage = () => {
             : item
         )
       );
-      console.log(i, "Add In Cart!");
     },
   };
 
@@ -90,7 +101,6 @@ export const Homepage = () => {
             : item
         )
       );
-      console.log(i, "Remove In Items!");
     },
     inCart: (i) => {
       setCart((state) =>
@@ -100,7 +110,6 @@ export const Homepage = () => {
             : item
         )
       );
-      console.log(i, "Remove In Cart!");
     },
   };
 
@@ -121,8 +130,9 @@ export const Homepage = () => {
   //   setCart(cart.filter((product) => product.id !== id));
   // }
 
-  function deleteAll() {
+  function removeAll() {
     setCart([]);
+    toast("Carrinho limpo!", { id: "removeAll", icon: "🗑" });
   }
 
   function showProducts(props) {
@@ -171,13 +181,11 @@ export const Homepage = () => {
         />
         <Cart
           cart={cart}
-          // deleteProduct={deleteProduct}
-          deleteAll={deleteAll}
-          // handleClick={handleClick}
-
+          removeAll={removeAll}
           addItem={addItem.inCart}
           removeItem={removeItem.inCart}
           removeFromCart={removeFromCart}
+          cartCountTotal={cartCountTotal}
         />
       </Main>
       <Footer />
