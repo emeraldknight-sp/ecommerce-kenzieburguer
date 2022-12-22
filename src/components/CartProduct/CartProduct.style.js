@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledCartProduct = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   .item__card {
     display: flex;
@@ -16,14 +17,14 @@ export const StyledCartProduct = styled.div`
     flex-direction: column;
 
     background-color: var(--gray-2);
-    width: 80px;
     padding: 5px;
     border: none;
     border-radius: 5px;
   }
 
   .item__image {
-    width: 70px;
+    width: 50px;
+    height: 50px;
   }
 
   .item__details {
@@ -32,27 +33,16 @@ export const StyledCartProduct = styled.div`
   }
 
   .item__title {
-    font-size: var(--heading-3);
-    line-height: var(--line-height-h3);
+    font-size: var(--content-md);
+    line-height: var(--line-height-md);
     color: var(--gray-4);
     font-weight: bold;
-    line-height: 24px;
   }
 
-  .item__category {
+  .item__category, .item__price {
     font-size: var(--content-sm);
     line-height: var(--line-height-sm);
     font-weight: 400;
-    line-height: 16px;
     color: var(--gray-3);
-  }
-
-  .item__remove {
-    font-size: var(--content-sm);
-    line-height: var(--line-height-sm);
-    font-weight: 400;
-    line-height: 16px;
-    color: var(--gray-3);
-    cursor: pointer;
   }
 `;
