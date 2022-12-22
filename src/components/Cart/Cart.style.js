@@ -4,8 +4,7 @@ export const StyledCart = styled.div`
   min-width: 256px;
   max-width: 400px;
   margin: 0 auto;
-  padding: 20px;
-  border: 2px solid transparent;
+  padding: 15px;
   
   .car__header {
     background-color: var(--color-primary);
