@@ -3,7 +3,7 @@ import { StyledButton } from "./Button.style";
 export const Button = ({
   children,
   variant = "primary",
-  size = "medium",
+  size = "md",
   bold,
   round,
   ...rest

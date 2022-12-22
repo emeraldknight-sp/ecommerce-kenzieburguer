@@ -9,7 +9,6 @@ export const StyledButton = styled.button`
 
   font-size: var(--content-md);
   line-height: var(--line-height-md);
-  /* font-weight: bolder; */
   cursor: pointer;
 
   background-color: ${(props) =>
@@ -35,22 +34,16 @@ export const StyledButton = styled.button`
       : "var(--gray-4)"};
 
   padding: ${(props) =>
-    props.size === "medium"
-      ? "10px"
-      : props.size === "small"
-      ? "5pxpx"
-      : "20px"};
-
-  height: ${(props) =>
-    props.size === "medium"
-      ? "40px"
-      : props.size === "small"
-      ? "30px"
-      : "50px"};
+    props.size === "lg" ? "10px" : props.size === "sm" ? "2px" : "5px"};
 
   border-radius: ${(props) => (props.round === true ? "50%" : "8px")};
 
-  font-weight: ${(props) => props.bold ? "600" : ""};
+  width: ${(props) => (props.full ? "100%" : "")};
+
+  height: ${(props) =>
+    props.size === "lg" ? "50px" : props.size === "sm" ? "30px" : "40px"};
+
+  font-weight: ${(props) => (props.bold ? "600" : "")};
 
   @media only screen and (min-width: 1024px) {
     display: ${(props) => (props.variant === "icon" ? "none" : "flex")};
