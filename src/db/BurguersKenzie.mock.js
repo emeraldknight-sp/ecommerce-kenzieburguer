@@ -6,6 +6,7 @@ export const BurguersKenzie = [
     price: 14,
     image: "https://i.imgur.com/Vng6VzV.png",
     quantity: 1,
+    inCart: false,
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const BurguersKenzie = [
     price: 16,
     image: "https://i.imgur.com/soOUeeW.png",
     quantity: 1,
+    inCart: false,
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export const BurguersKenzie = [
     price: 18,
     image: "https://i.imgur.com/eEzZzcF.png",
     quantity: 1,
+    inCart: false,
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ export const BurguersKenzie = [
     price: 5,
     image: "https://i.imgur.com/YuIbfCi.png",
     quantity: 1,
+    inCart: false,
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ export const BurguersKenzie = [
     price: 4.99,
     image: "https://i.imgur.com/KC2ihEN.png",
     quantity: 1,
+    inCart: false,
   },
   {
     id: 6,
@@ -46,5 +51,6 @@ export const BurguersKenzie = [
     price: 4.99,
     image: "https://i.imgur.com/iNkD4Pq.png",
     quantity: 1,
+    inCart: false,
   },
 ];
