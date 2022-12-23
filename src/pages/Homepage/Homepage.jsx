@@ -8,9 +8,12 @@ import { Header } from "../../components/Header";
 import { Main } from "../../components/Main";
 import { Cart } from "../../components/Cart";
 
+import { v4 as uuidv4 } from "uuid";
+
 import { BurguersKenzie } from "../../db/BurguersKenzie.mock";
 
 import { StyledHomepage } from "./Homepage.style";
+import { Button } from "../../components/Button";
 
 export const Homepage = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -21,45 +24,59 @@ export const Homepage = () => {
   const addToCart = (i) => {
     setItems((state) =>
       state.map((item, p) => {
+        const addedItem = {
+          name: item.name,
+          price: item.price,
+          quantity: item.quantity,
+          image: item.image,
+          inCart: true,
+          dataId: uuidv4(),
+        };
+        
         if (i === p) {
-          setCart([
-            ...cart,
-            {
-              name: item.name,
-              price: item.price,
-              quantity: item.quantity,
-              image: item.image,
-              category: item.category,
-            },
-          ]);
-          return { ...item, inCart: true };
+          setCart([...cart, addedItem]);
+          return item;
         }
         return item;
       })
     );
 
-    toast.success("Item adicionado!", { id: "addInItems" });
+    toast.success("Item adicionado!", { id: "addToCar" });
   };
+
+  // const addToCart = (item) => {
+  //   if (!cart.includes(product)) {
+  //     setCart([...cart, product]);
+  //   }
+  // };
 
   const removeFromCart = (i) => {
     let chosenItem, index;
+
     for (index = 0; index < cart.length; index++) {
       if (index === i) {
-        chosenItem = cart[index].name;
+        chosenItem = cart[index];
         break;
       }
     }
-    setCart((state) => state.filter((item) => chosenItem !== item.name));
+
+    setCart((state) =>
+      state.filter((item) => chosenItem.dataId !== item.dataId)
+    );
     setItems((state) =>
       state.map((item) =>
-        item.name === chosenItem
+        item.name === chosenItem.name
           ? { ...item, inCart: false, quantity: 1 }
           : item
       )
     );
 
-    toast.error("Item removido", { id: "removeInItems" });
+    toast.error("Item removido!", { id: "removeFromCar" });
   };
+
+  // function removeFromCart(cart, id) {
+  //   setCart(cart.filter((product) => product.id !== id));
+  // }
 
   const cartCountTotal = cart
     .reduce(
@@ -120,16 +137,6 @@ export const Homepage = () => {
     }
   }
 
-  // function handleClick(product) {
-  //   if (!cart.includes(product)) {
-  //     setCart([...cart, product]);
-  //   }
-  // }
-
-  // function deleteProduct(cart, id) {
-  //   setCart(cart.filter((product) => product.id !== id));
-  // }
-
   function removeAll() {
     setCart([]);
     toast("Carrinho limpo!", { id: "removeAll", icon: "🗑" });
@@ -163,12 +170,7 @@ export const Homepage = () => {
                 type="search"
                 placeholder="Digitar pesquisa"
               />
-              <button
-                className="header__search__button"
-                onClick={() => showProducts(searchParam)}
-              >
-                Buscar
-              </button>
+              <Button onClick={() => showProducts(searchParam)}>Buscar</Button>
             </div>
           </Container>
         </div>

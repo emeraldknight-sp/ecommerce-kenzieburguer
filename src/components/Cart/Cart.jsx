@@ -15,8 +15,8 @@ export const Cart = ({
   cartCountTotal,
 }) => {
   const items = cart.map((item) => item.name);
-  const price = cart.map((item) => item.price);
-  const subtotal = price.reduce((acc, currentValue) => acc + currentValue, 0);
+  const price = cart.map((item) => item.price * item.quantity);
+  const subtotal = Number(price.reduce((acc, currentValue) => acc + currentValue, 0).toFixed(2));
 
   const order = {
     id: uuidv4(),
@@ -27,7 +27,7 @@ export const Cart = ({
 
   const sendOrder = () => {
     toast.success("Pedido finalizado!", { id: "sendOrder" });
-    return console.log({status: "Pedido realizado", order: order});
+    console.log({ status: "Pedido realizado", order: order });
   };
 
   return (
