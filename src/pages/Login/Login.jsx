@@ -100,20 +100,12 @@ export const Login = () => {
                     toast.success("Redefinir senha!", { id: "pwd" });
                   }}
                 >
-                  Esqueceu Link senha?
+                  Esqueceu sua senha?
                 </Link>
               </span>
               <span className="span">
                 Não possui conta?
-                <Link
-                  to="/login"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    toast.success("Criar conta!", { id: "signup" });
-                  }}
-                >
-                  Crie uma agora!
-                </Link>
+                <Link to="/register">Crie uma agora!</Link>
               </span>
             </div>
           </form>
