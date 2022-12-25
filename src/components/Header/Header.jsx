@@ -11,16 +11,8 @@ import { Link, useNavigate } from "react-router-dom";
 export const Header = () => {
   const navigate = useNavigate();
 
-  const login = (link) => {
-    navigate(`${link}`);
-  };
-
   const menu = () => {
     toast.success("Menu", { id: "menu" });
-  };
-
-  const register = () => {
-    toast.success("Registro", { id: "register" });
   };
 
   return (
@@ -40,11 +32,11 @@ export const Header = () => {
             display="none"
             variant="text"
             bold
-            onClick={register}
+            onClick={() => navigate("/register")}
           >
             Registre-se
           </Button>
-          <Button type="button" onClick={() => login("/login")}>
+          <Button type="button" onClick={() => navigate("/login")}>
             Entrar
           </Button>
         </div>
