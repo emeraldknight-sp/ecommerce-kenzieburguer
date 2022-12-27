@@ -34,7 +34,7 @@ export const StyledSpanGroup = styled.div`
 
 export const StyledSpan = styled.span`
   display: flex;
-  font-size: var(--content-xs);
-  line-height: var(--line-height-xs);
+  font-size: var(--content-sm);
+  line-height: var(--line-height-sm);
   gap: 4px;
 `;
