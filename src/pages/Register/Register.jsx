@@ -7,11 +7,16 @@ import { Logo } from "../../components/Logo";
 import { Button } from "../../components/Button";
 import { Form } from "../../components/Form/Form";
 import { Container } from "../../components/Container";
-
-import { StyledOptionsLogin, StyledRegister } from "./Register.style";
+import { FormGroup } from "../../components/FormGroup";
 import { Input } from "../../components/Input";
 import { Label } from "../../components/Label";
-import { FormGroup } from "../../components/FormGroup";
+
+import {
+  StyledButtonGroup,
+  StyledOptions,
+  StyledRegister,
+} from "./Register.style";
+import { Divider } from "../../components/Divider";
 
 export const Register = () => {
   const handleClick = (e) => {
@@ -45,17 +50,6 @@ export const Register = () => {
               size="md"
               border
               placeholder="Doe"
-            />
-          </FormGroup>
-          <FormGroup>
-            <Label htmlFor="birthday">Data de Nascimento</Label>
-            <Input
-              type="date"
-              id="birthday"
-              name="birthday"
-              size="md"
-              border
-              placeholder="Data de Nascimento"
             />
           </FormGroup>
           <FormGroup>
@@ -98,9 +92,9 @@ export const Register = () => {
             <Input id="accept" name="accept" size="xs" type="checkbox" />
           </FormGroup>
           <Button type="submit">Cadastrar!</Button>
-          <StyledOptionsLogin>
-            <span>----------- ou -----------</span>
-            <div>
+          <StyledOptions>
+            <Divider>or</Divider>
+            <StyledButtonGroup>
               <Button variant="text">
                 <FcGoogle />
               </Button>
@@ -113,8 +107,11 @@ export const Register = () => {
               <Button variant="text">
                 <BsMicrosoft />
               </Button>
-            </div>
-          </StyledOptionsLogin>
+            </StyledButtonGroup>
+            <span>
+              Já possui conta? <Link to="/login">Entre aqui</Link>
+            </span>
+          </StyledOptions>
         </Form>
       </Container>
     </StyledRegister>
