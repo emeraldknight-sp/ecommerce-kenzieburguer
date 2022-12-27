@@ -5,7 +5,6 @@ export const StyledForm = styled.form`
   flex-direction: column;
   gap: 1rem;
 
-  width: 250px;
   padding: 10px;
   margin: 0 auto;
   border: 2px solid var(--transparent);
@@ -20,7 +19,16 @@ export const StyledForm = styled.form`
   }
 
   a {
-    margin: 0 auto;
+    text-decoration: none;
+    color: var(--information);
+  }
+
+  a:visited {
+    color: var(--gray-3);
+  }
+
+  a:active {
+    color: var(--color-primary);
   }
 
   /* span {
@@ -30,8 +38,4 @@ export const StyledForm = styled.form`
     color: var(--negative);
     gap: 4px;
   } */
-
-  @media only screen and (min-width: 425px) {
-    width: 300px;
-  }
 `;

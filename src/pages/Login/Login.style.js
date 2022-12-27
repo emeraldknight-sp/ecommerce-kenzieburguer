@@ -10,25 +10,6 @@ export const StyledLogin = styled.div`
   background-color: var(--gray-1);
   padding: 50px 0 0;
 
-  .login {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .login__button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-  }
-
-  .footer {
-    width: 100%;
-    background-color: var(--gray-3);
-    color: var(--gray-1);
-  }
-
   @media only screen and (min-width: 1024px) {
     section {
       display: flex;

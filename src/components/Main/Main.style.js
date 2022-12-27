@@ -16,21 +16,4 @@ export const StyledMain = styled.main`
     margin: 20px auto 0;
     padding: 5px;
   }
-
-  .header__search__input {
-    border: none;
-    outline: none;
-    width: 100%;
-  }
-
-  .header__search__button {
-    background-color: var(--color-primary);
-    font-size: var(--content-md);
-    line-height: var(--line-height-md);
-    color: white;
-    padding: 8px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
 `;
