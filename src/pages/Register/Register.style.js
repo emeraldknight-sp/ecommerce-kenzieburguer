@@ -5,10 +5,16 @@ export const StyledRegister = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 500px;
   min-height: 100vh;
   background-color: var(--gray-1);
   padding: 50px 0 0;
+
+  span {
+    font-size: var(--content-sm);
+    line-height: var(--line-height-sm);
+    text-align: center;
+    margin: 8px 0;
+  }
 
   @media only screen and (min-width: 1024px) {
     section {
@@ -25,15 +31,16 @@ export const StyledRegister = styled.div`
   }
 `;
 
-export const StyledOptionsLogin = styled.div`
+export const StyledOptions = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+`;
 
-  div {
-    display: flex;
-    flex-direction: row;
-  }
+export const StyledButtonGroup = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
 `;
