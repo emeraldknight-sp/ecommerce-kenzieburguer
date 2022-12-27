@@ -6,6 +6,8 @@ export const Input = ({
   name,
   placeholder,
   autoComplete="off",
+  size,
+  border,
   ...rest
 }) => {
   return (
@@ -15,6 +17,8 @@ export const Input = ({
       name={name}
       placeholder={placeholder}
       autoComplete={autoComplete}
+      size={size}
+      border={border}
       {...rest}
     />
   );
