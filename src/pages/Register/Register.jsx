@@ -27,7 +27,14 @@ export const Register = () => {
           <h2>Criar conta</h2>
           <FormGroup>
             <Label htmlFor="name">Nome</Label>
-            <Input type="text" id="name" name="first-name" placeholder="John" />
+            <Input
+              type="text"
+              id="name"
+              name="first-name"
+              size="md"
+              border
+              placeholder="John"
+            />
           </FormGroup>
           <FormGroup>
             <Label htmlFor="surname">Sobrenome</Label>
@@ -35,6 +42,8 @@ export const Register = () => {
               type="text"
               id="surname"
               name="last-name"
+              size="md"
+              border
               placeholder="Doe"
             />
           </FormGroup>
@@ -44,6 +53,8 @@ export const Register = () => {
               type="date"
               id="birthday"
               name="birthday"
+              size="md"
+              border
               placeholder="Data de Nascimento"
             />
           </FormGroup>
@@ -53,6 +64,8 @@ export const Register = () => {
               type="email"
               id="email"
               name="email"
+              size="md"
+              border
               placeholder="johndoe@email.com"
             />
           </FormGroup>
@@ -62,6 +75,8 @@ export const Register = () => {
               type="password"
               id="password"
               name="password"
+              size="md"
+              border
               placeholder="Uma senha segura"
             />
           </FormGroup>
@@ -71,6 +86,8 @@ export const Register = () => {
               type="password"
               id="confirm"
               name="confirm"
+              size="md"
+              border
               placeholder="Confirme sua senha segura"
             />
           </FormGroup>
@@ -78,7 +95,7 @@ export const Register = () => {
             <Label htmlFor="accept">
               Aceito os <Link to="/register">termos e condições</Link>
             </Label>
-            <Input id="accept" type="checkbox" />
+            <Input id="accept" name="accept" size="xs" type="checkbox" />
           </FormGroup>
           <Button type="submit">Cadastrar!</Button>
           <StyledOptionsLogin>

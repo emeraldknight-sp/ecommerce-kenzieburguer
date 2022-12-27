@@ -14,6 +14,7 @@ import { BurguersKenzie } from "../../db/BurguersKenzie.mock";
 
 import { StyledHomepage } from "./Homepage.style";
 import { Button } from "../../components/Button";
+import { Input } from "../../components/Input";
 
 export const Homepage = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -32,7 +33,7 @@ export const Homepage = () => {
           inCart: true,
           dataId: uuidv4(),
         };
-        
+
         if (i === p) {
           setCart([...cart, addedItem]);
           return item;
@@ -164,8 +165,7 @@ export const Homepage = () => {
         <div>
           <Container>
             <div className="header__search">
-              <input
-                className="header__search__input"
+              <Input
                 onChange={(e) => searchProduct(e.target.value)}
                 type="search"
                 placeholder="Digitar pesquisa"

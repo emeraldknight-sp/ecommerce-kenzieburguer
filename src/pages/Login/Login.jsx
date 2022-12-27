@@ -50,59 +50,64 @@ export const Login = () => {
     <StyledLogin>
       <Container>
         <Banner />
-        <div className="login">
-          <Form onSubmit={handleSubmit(onSubmit)}>
-            <Logo />
-            <h2>Entrar</h2>
-            <FormGroup>
-              <Label htmlFor="email">Email</Label>
-              <Input
-                type="text"
-                id="email"
-                name="email"
-                placeholder="Digite seu email ou telefone"
-                {...register("email")}
-              />
-              <span>{errors.email?.message}</span>
-            </FormGroup>
+        <Form onSubmit={handleSubmit(onSubmit)}>
+          <Logo />
+          <h2>Entrar</h2>
+          <FormGroup>
+            <Label htmlFor="email">Email</Label>
+            <Input
+              type="text"
+              id="email"
+              name="email"
+              size="md"
+              border
+              placeholder="Digite seu email ou telefone"
+              {...register("email")}
+            />
+            <span>{errors.email?.message}</span>
+          </FormGroup>
 
-            <FormGroup>
-              <Label htmlFor="password">Senha</Label>
-              <Input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Digite sua senha"
-                {...register("password")}
-              />
-              <span>{errors.password?.message}</span>
-            </FormGroup>
+          <FormGroup>
+            <Label htmlFor="password">Senha</Label>
+            <Input
+              type="password"
+              id="password"
+              name="password"
+              size="md"
+              border
+              placeholder="Digite sua senha"
+              {...register("password")}
+            />
+            <span>{errors.password?.message}</span>
+          </FormGroup>
 
-            <FormGroup checkbox>
-              <Label htmlFor="remember">Lembre-se de mim por 30 dias</Label>
-              <Input
-                type="checkbox"
-                id="remember"
-                name="remember"
-                {...register("check")}
-              />
-            </FormGroup>
+          <FormGroup checkbox>
+            <Label htmlFor="remember">Lembre-se de mim por 30 dias</Label>
+            <Input
+              type="checkbox"
+              id="remember"
+              name="remember"
+              size="xs"
+              border
+              {...register("check")}
+            />
+          </FormGroup>
 
-            <Button type="submit">Entrar</Button>
+          <Button type="submit">Entrar</Button>
 
-            <StyledSpanGroup>
-              <StyledSpan>
-                <Link to="/login" onClick={passwordReset}>
-                  Esqueceu sua senha?
-                </Link>
-              </StyledSpan>
-              <StyledSpan>
-                Não possui conta?
-                <Link to="/register">Crie uma agora!</Link>
-              </StyledSpan>
-            </StyledSpanGroup>
-          </Form>
-        </div>
+          <StyledSpanGroup>
+            <StyledSpan>
+              Esqueceu sua senha?
+              <Link to="/login" onClick={passwordReset}>
+                Redefina aqui!
+              </Link>
+            </StyledSpan>
+            <StyledSpan>
+              Não possui conta?
+              <Link to="/register">Crie uma agora!</Link>
+            </StyledSpan>
+          </StyledSpanGroup>
+        </Form>
       </Container>
     </StyledLogin>
   );
