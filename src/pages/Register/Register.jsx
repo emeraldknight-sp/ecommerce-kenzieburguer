@@ -1,19 +1,17 @@
+import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { BsApple, BsFacebook, BsMicrosoft } from "react-icons/bs";
 
-import KenzieBurguerBrand from "../../assets/logo.svg";
-import KenzieBurguerImage from "../../assets/fast-food-01.svg";
-
+import { Banner } from "../../components/Banner";
+import { Logo } from "../../components/Logo";
 import { Button } from "../../components/Button";
 import { Container } from "../../components/Container";
 
 import {
   StyledFormCreateAccount,
-  StyledLogo,
   StyledOptionsLogin,
   StyledRegister,
 } from "./Register.style";
-import { Link } from "react-router-dom";
 
 export const Register = () => {
   const handleClick = (e) => {
@@ -23,17 +21,9 @@ export const Register = () => {
   return (
     <StyledRegister>
       <Container>
-        <StyledLogo>
-            <figure>
-              <img src={KenzieBurguerImage} alt="brand" width={150} />
-            </figure>
-        </StyledLogo>
+        <Banner />
         <StyledFormCreateAccount onSubmit={handleClick}>
-          <Link to="/">
-            <figure>
-              <img src={KenzieBurguerBrand} alt="logo" />
-            </figure>
-          </Link>
+          <Logo />
           <h2>Criar conta</h2>
           <input type="text" placeholder="Nome" />
           <input type="text" placeholder="Sobrenome" />
@@ -41,26 +31,30 @@ export const Register = () => {
           <input type="text" placeholder="Email" />
           <input type="password" placeholder="Senha" />
           <input type="password" placeholder="Confirmação de senha" />
+          <div className="checkbox">
+            <label htmlFor="accept">
+              Aceito os <Link to="/register">termos e condições</Link>
+            </label>
+            <input id="accept" type="checkbox" />
+          </div>
           <Button type="submit">Cadastrar!</Button>
-        <StyledOptionsLogin>
-          <div className="bar">
-            <span>-----------</span> ou <span>-----------</span>
-          </div>
-          <div className="options">
-            <Button variant="text">
-              <FcGoogle />
-            </Button>
-            <Button variant="text">
-              <BsFacebook />
-            </Button>
-            <Button variant="text">
-              <BsApple />
-            </Button>
-            <Button variant="text">
-              <BsMicrosoft />
-            </Button>
-          </div>
-        </StyledOptionsLogin>
+          <StyledOptionsLogin>
+            <span>----------- ou -----------</span>
+            <div>
+              <Button variant="text">
+                <FcGoogle />
+              </Button>
+              <Button variant="text">
+                <BsFacebook />
+              </Button>
+              <Button variant="text">
+                <BsApple />
+              </Button>
+              <Button variant="text">
+                <BsMicrosoft />
+              </Button>
+            </div>
+          </StyledOptionsLogin>
         </StyledFormCreateAccount>
       </Container>
     </StyledRegister>

@@ -1,12 +1,12 @@
-import { Button } from "../Button";
-import { Container } from "../Container";
-
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import { FiMenu } from "react-icons/fi";
 
-import KenzieBurguerBrand from "../../assets/logo.svg";
+import { Logo } from "../Logo";
+import { Button } from "../Button";
+import { Container } from "../Container";
+
 import { StyledHeader } from "./Header.style";
-import { Link, useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const navigate = useNavigate();
@@ -21,11 +21,7 @@ export const Header = () => {
         <Button type="button" variant="icon" onClick={menu}>
           <FiMenu size={20} />
         </Button>
-        <Link to="/">
-          <figure>
-            <img src={KenzieBurguerBrand} alt="brand" />
-          </figure>
-        </Link>
+        <Logo />
         <div className="header__button__group">
           <Button
             type="button"

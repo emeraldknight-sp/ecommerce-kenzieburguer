@@ -6,10 +6,10 @@ import { yupResolver } from "@hookform/resolvers/yup";
 
 import { Button } from "../../components/Button";
 import { Container } from "../../components/Container";
-import { StyledLogin } from "./Login.style";
+import { Banner } from "../../components/Banner";
+import { Logo } from "../../components/Logo";
 
-import KenzieBurguerBrand from "../../assets/logo.svg";
-import FastFood from "../../assets/fast-food-01.svg";
+import { StyledLogin } from "./Login.style";
 
 export const Login = () => {
   const schema = yup.object().shape({
@@ -40,19 +40,11 @@ export const Login = () => {
   return (
     <StyledLogin>
       <Container>
-        <figure className="figure__icon-login">
-          <img className="image__icon-login" src={FastFood} alt="banner" />
-        </figure>
+        <Banner />
         <div className="login">
-          <div className="brand">
-            <Link className="login__button" to="/">
-              <figure>
-                <img src={KenzieBurguerBrand} alt="brand" />
-              </figure>
-            </Link>
-          </div>
-          {/* FORMULARIO */}
           <form className="form" onSubmit={handleSubmit(onSubmit)}>
+            <Logo />
+            <h2>Entrar</h2>
             <div className="input-container">
               <label className="label" htmlFor="email">
                 Email
