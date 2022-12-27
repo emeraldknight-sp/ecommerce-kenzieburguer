@@ -15,6 +15,7 @@ import {
   StyledButtonGroup,
   StyledOptions,
   StyledRegister,
+  StyledSpan,
 } from "./Register.style";
 import { Divider } from "../../components/Divider";
 
@@ -108,9 +109,9 @@ export const Register = () => {
                 <BsMicrosoft />
               </Button>
             </StyledButtonGroup>
-            <span>
+            <StyledSpan>
               Já possui conta? <Link to="/login">Entre aqui</Link>
-            </span>
+            </StyledSpan>
           </StyledOptions>
         </Form>
       </Container>
