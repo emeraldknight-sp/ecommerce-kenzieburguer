@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+<h1 align="center"> E-commerce Kenzie Burguer </h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+Aplicação front-end que simula um e-commerce de fast-food
+</p>
 
-## Available Scripts
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licença">Licença</a>
+</p>
 
-In the project directory, you can run:
+<p align="center">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
+</p>
 
-### `yarn start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p align="center">
+  <img alt="kenzie burguer" src=".github/kenzie-burguer.png" width="100%">
+</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Tecnologias
 
-### `yarn test`
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- HTML e CSS
+- JavaScript ES6+
+- [React.JS](https://reactjs.org/docs/getting-started.html)
+- [styled-components](https://styled-components.com/docs)
+- [create react-app (CRA)](https://create-react-app.dev/)
 
-### `yarn build`
+## 💻 Projeto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A Kenzie Burguer é o projeto que simula uma loja virtual estabelecido como atividade no curso de Desenvolvimento Full Stack da Kenzie Academy Brasil O objetivo desta entrega é construir uma aplicação baseada no que aprenderam em React até este momento, como também aperfeiçoar as habilidades de estilização.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🏡 Executando o projeto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Primeiro faça a instalação das dependências do projeto com o comando
 
-### `yarn eject`
+```sh
+yarn
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Este é um projeto simples e se você o clonou em sua máquina para que possa ver ele em execução basta digitar o comando
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+yarn start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Formatar o código do projeto
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```sh
+yarn write 
+```
 
-## Learn More
+Checar se a formatação está igual para todos os arquivos
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
+yarn check 
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🔖 Layout
 
-### Code Splitting
+Você pode visualizar o layout do projeto [aqui](https://www.figma.com/file/DGYuUCq2pOjwHipdwYRTzq/Entrega%3A-e-Commerce-Kenzie-Burguer?node-id=0%3A1&t=4wyRrQcoxrp9SyWx-1). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📝 Licença
 
-### Analyzing the Bundle Size
+Esse projeto está sob a licença MIT.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
