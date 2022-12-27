@@ -6,25 +6,19 @@ export const StyledRegister = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-`;
 
-export const StyledLogo = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  a {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  @media only screen and (min-width: 1024px) {
+    section {
+      display: flex;
+      flex-direction: row;
+      gap: 70px;
+    }
   }
 
-  figure {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  @media only screen and (min-width: 1440px) {
+    section {
+      gap: 100px;
+    }
   }
 `;
 
@@ -33,8 +27,7 @@ export const StyledFormCreateAccount = styled.form`
   flex-direction: column;
   gap: 1rem;
 
-  width: 100%;
-  max-width: 300px;
+  width: 250px;
   padding: 10px;
   margin: 0 auto;
   border: 2px solid var(--transparent);
@@ -58,6 +51,25 @@ export const StyledFormCreateAccount = styled.form`
     border-radius: 4px;
     outline: none;
   }
+
+  .checkbox {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4px;
+
+    font-size: var(--content-xs);
+    line-height: var(--line-height-xs);
+
+    input {
+      margin: 0;
+    }
+  }
+
+  @media only screen and (min-width: 425px) {
+    width: 300px;
+  }
 `;
 
 export const StyledOptionsLogin = styled.div`
@@ -67,7 +79,7 @@ export const StyledOptionsLogin = styled.div`
   align-items: center;
   margin: 0 auto;
 
-  .options {
+  div {
     display: flex;
     flex-direction: row;
   }

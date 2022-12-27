@@ -9,30 +9,11 @@ export const StyledLogin = styled.div`
   min-height: 100vh;
   background-color: var(--gray-1);
 
-  .figure__icon-login {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .image__icon-login {
-    width: 150px;
-  }
-
   .login {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-  .brand {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 40px;
   }
 
   .login__button {
@@ -44,12 +25,19 @@ export const StyledLogin = styled.div`
   .form {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    width: 100%;
-    max-width: 300px;
-    padding: 10px 40px;
+    gap: 1rem;
+    width: 270px;
+    padding: 10px;
     border: 2px solid var(--transparent);
     border-radius: 8px;
+
+    h2 {
+      font-size: var(--heading-2);
+      line-height: var(--lineheight-h2);
+      font-weight: bold;
+      color: var(--color-primary);
+      text-align: center;
+    }
   }
 
   .input-container {
@@ -74,9 +62,15 @@ export const StyledLogin = styled.div`
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    gap: 4px;
+
     font-size: var(--content-xs);
     line-height: var(--line-height-xs);
+
+    input {
+      margin: 0;
+    }
   }
 
   .span-group {
@@ -94,7 +88,6 @@ export const StyledLogin = styled.div`
   }
 
   .error {
-
     color: var(--negative);
   }
 
@@ -104,25 +97,23 @@ export const StyledLogin = styled.div`
     color: var(--gray-1);
   }
 
+  @media only screen and (min-width: 425px) {
+    .form {
+      width: 300px;
+    }
+  }
+
   @media only screen and (min-width: 1024px) {
     section {
       display: flex;
       flex-direction: row;
       gap: 70px;
     }
-
-    .image__icon-login {
-      width: 350px;
-    }
   }
 
   @media only screen and (min-width: 1440px) {
     section {
       gap: 100px;
-    }
-
-    .image__icon-login {
-      width: 450px;
     }
   }
 `;
