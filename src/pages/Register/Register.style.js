@@ -44,3 +44,10 @@ export const StyledButtonGroup = styled.div`
   justify-content: space-evenly;
   width: 100%;
 `;
+
+export const StyledSpan = styled.span`
+  display: flex;
+  font-size: var(--content-sm);
+  line-height: var(--line-height-sm);
+  gap: 4px;
+`;
