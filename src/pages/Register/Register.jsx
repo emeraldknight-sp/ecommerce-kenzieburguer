@@ -5,13 +5,13 @@ import { BsApple, BsFacebook, BsMicrosoft } from "react-icons/bs";
 import { Banner } from "../../components/Banner";
 import { Logo } from "../../components/Logo";
 import { Button } from "../../components/Button";
+import { Form } from "../../components/Form/Form";
 import { Container } from "../../components/Container";
 
-import {
-  StyledFormCreateAccount,
-  StyledOptionsLogin,
-  StyledRegister,
-} from "./Register.style";
+import { StyledOptionsLogin, StyledRegister } from "./Register.style";
+import { Input } from "../../components/Input";
+import { Label } from "../../components/Label";
+import { FormGroup } from "../../components/FormGroup";
 
 export const Register = () => {
   const handleClick = (e) => {
@@ -22,21 +22,64 @@ export const Register = () => {
     <StyledRegister>
       <Container>
         <Banner />
-        <StyledFormCreateAccount onSubmit={handleClick}>
+        <Form onSubmit={handleClick}>
           <Logo />
           <h2>Criar conta</h2>
-          <input type="text" placeholder="Nome" />
-          <input type="text" placeholder="Sobrenome" />
-          <input type="date" placeholder="Data de Nascimento" />
-          <input type="text" placeholder="Email" />
-          <input type="password" placeholder="Senha" />
-          <input type="password" placeholder="Confirmação de senha" />
-          <div className="checkbox">
-            <label htmlFor="accept">
+          <FormGroup>
+            <Label htmlFor="name">Nome</Label>
+            <Input type="text" id="name" name="first-name" placeholder="John" />
+          </FormGroup>
+          <FormGroup>
+            <Label htmlFor="surname">Sobrenome</Label>
+            <Input
+              type="text"
+              id="surname"
+              name="last-name"
+              placeholder="Doe"
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label htmlFor="birthday">Data de Nascimento</Label>
+            <Input
+              type="date"
+              id="birthday"
+              name="birthday"
+              placeholder="Data de Nascimento"
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label htmlFor="email">Email</Label>
+            <Input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="johndoe@email.com"
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label htmlFor="password">Senha</Label>
+            <Input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Uma senha segura"
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label htmlFor="confirm">Confirmação de Senha</Label>
+            <Input
+              type="password"
+              id="confirm"
+              name="confirm"
+              placeholder="Confirme sua senha segura"
+            />
+          </FormGroup>
+          <FormGroup checkbox>
+            <Label htmlFor="accept">
               Aceito os <Link to="/register">termos e condições</Link>
-            </label>
-            <input id="accept" type="checkbox" />
-          </div>
+            </Label>
+            <Input id="accept" type="checkbox" />
+          </FormGroup>
           <Button type="submit">Cadastrar!</Button>
           <StyledOptionsLogin>
             <span>----------- ou -----------</span>
@@ -55,7 +98,7 @@ export const Register = () => {
               </Button>
             </div>
           </StyledOptionsLogin>
-        </StyledFormCreateAccount>
+        </Form>
       </Container>
     </StyledRegister>
   );

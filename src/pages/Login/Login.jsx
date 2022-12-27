@@ -9,7 +9,11 @@ import { Container } from "../../components/Container";
 import { Banner } from "../../components/Banner";
 import { Logo } from "../../components/Logo";
 
-import { StyledLogin } from "./Login.style";
+import { StyledLogin, StyledSpan, StyledSpanGroup } from "./Login.style";
+import { Form } from "../../components/Form/Form";
+import { FormGroup } from "../../components/FormGroup";
+import { Label } from "../../components/Label";
+import { Input } from "../../components/Input";
 
 export const Login = () => {
   const schema = yup.object().shape({
@@ -32,6 +36,11 @@ export const Login = () => {
     resolver: yupResolver(schema),
   });
 
+  const passwordReset = (e) => {
+    e.preventDefault();
+    toast.success("Redefinir senha!", { id: "pwd" });
+  };
+
   const onSubmit = (data) => {
     console.log(data);
     toast.success("Dados enviados!", { id: "data" });
@@ -42,65 +51,57 @@ export const Login = () => {
       <Container>
         <Banner />
         <div className="login">
-          <form className="form" onSubmit={handleSubmit(onSubmit)}>
+          <Form onSubmit={handleSubmit(onSubmit)}>
             <Logo />
             <h2>Entrar</h2>
-            <div className="input-container">
-              <label className="label" htmlFor="email">
-                Email
-              </label>
-              <input
+            <FormGroup>
+              <Label htmlFor="email">Email</Label>
+              <Input
                 type="text"
-                className="input"
                 id="email"
                 name="email"
                 placeholder="Digite seu email ou telefone"
-                autoComplete="off"
                 {...register("email")}
               />
-              <span className="span error">{errors.email?.message}</span>
-            </div>
+              <span>{errors.email?.message}</span>
+            </FormGroup>
 
-            <div className="input-container">
-              <label className="label" htmlFor="password">
-                Senha
-              </label>
-              <input
+            <FormGroup>
+              <Label htmlFor="password">Senha</Label>
+              <Input
                 type="password"
-                className="input"
                 id="password"
                 name="password"
                 placeholder="Digite sua senha"
                 {...register("password")}
               />
-              <span className="span error">{errors.password?.message}</span>
-            </div>
+              <span>{errors.password?.message}</span>
+            </FormGroup>
 
-            <div className="checkbox">
-              <label htmlFor="remember">Lembre-se de mim por 30 dias</label>
-              <input id="remember" type="checkbox" {...register("check")} />
-            </div>
+            <FormGroup checkbox>
+              <Label htmlFor="remember">Lembre-se de mim por 30 dias</Label>
+              <Input
+                type="checkbox"
+                id="remember"
+                name="remember"
+                {...register("check")}
+              />
+            </FormGroup>
 
             <Button type="submit">Entrar</Button>
 
-            <div className="span-group">
-              <span className="span">
-                <Link
-                  to="/login"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    toast.success("Redefinir senha!", { id: "pwd" });
-                  }}
-                >
+            <StyledSpanGroup>
+              <StyledSpan>
+                <Link to="/login" onClick={passwordReset}>
                   Esqueceu sua senha?
                 </Link>
-              </span>
-              <span className="span">
+              </StyledSpan>
+              <StyledSpan>
                 Não possui conta?
                 <Link to="/register">Crie uma agora!</Link>
-              </span>
-            </div>
-          </form>
+              </StyledSpan>
+            </StyledSpanGroup>
+          </Form>
         </div>
       </Container>
     </StyledLogin>
